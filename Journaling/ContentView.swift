@@ -15,9 +15,6 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TextView(text: $textInput, textStyle: $textStyle)
-                .textFieldStyle(.roundedBorder)
-                .padding()
-            
             Button(action: {
                 writeTextToJSON(text: textInput)
                 savedText = textInput

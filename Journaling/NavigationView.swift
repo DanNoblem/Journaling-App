@@ -12,12 +12,19 @@ struct NavigationView: View {
         NavigationStack{
             List{
                 NavigationLink(destination: ContentView()){
-                    Text("Entry 1")
+                    Text("Work Notes");
+                    }
+                NavigationLink(destination: ContentView()){
+                    Text("Thouhgts");
                 }
+                NavigationLink(destination: ContentView()){
+                    Text("Daily tasks");
+                }
+                }.navigationTitle("Journals")
             }
         }
     }
-}
+
 
 struct NavigationView_Previews: PreviewProvider {
     static var previews: some View {
