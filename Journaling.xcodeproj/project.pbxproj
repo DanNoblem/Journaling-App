@@ -15,6 +15,7 @@
 		B14C6A6229F8612300361526 /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14C6A6129F8612300361526 /* TextEditor.swift */; };
 		B14C6A6429F861C000361526 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14C6A6329F861C000361526 /* TextView.swift */; };
 		B14C6A6629F871C300361526 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14C6A6529F871C300361526 /* NavigationView.swift */; };
+		B19FB0032A01AF8A00440B8A /* ModelJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19FB0022A01AF8A00440B8A /* ModelJSON.swift */; };
 		B1B4B3862A0199220077B7EE /* Textinfo.JSON in Resources */ = {isa = PBXBuildFile; fileRef = B1B4B3842A0199220077B7EE /* Textinfo.JSON */; };
 		B1B4B3872A0199220077B7EE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4B3852A0199220077B7EE /* Model.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		B14C6A6129F8612300361526 /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
 		B14C6A6329F861C000361526 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		B14C6A6529F871C300361526 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		B19FB0022A01AF8A00440B8A /* ModelJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelJSON.swift; sourceTree = "<group>"; };
 		B1B4B3842A0199220077B7EE /* Textinfo.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Textinfo.JSON; sourceTree = "<group>"; };
 		B1B4B3852A0199220077B7EE /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +73,7 @@
 				B14C6A6129F8612300361526 /* TextEditor.swift */,
 				B14C6A5B29F855F800361526 /* Text segment.swift */,
 				B1B4B3852A0199220077B7EE /* Model.swift */,
+				B19FB0022A01AF8A00440B8A /* ModelJSON.swift */,
 				B1B4B3842A0199220077B7EE /* Textinfo.JSON */,
 				B14C6A5029F84D1100361526 /* Assets.xcassets */,
 				B14C6A5229F84D1100361526 /* Journaling.entitlements */,
@@ -163,6 +166,7 @@
 				B14C6A4F29F84D0F00361526 /* ContentView.swift in Sources */,
 				B14C6A6229F8612300361526 /* TextEditor.swift in Sources */,
 				B14C6A6429F861C000361526 /* TextView.swift in Sources */,
+				B19FB0032A01AF8A00440B8A /* ModelJSON.swift in Sources */,
 				B14C6A6629F871C300361526 /* NavigationView.swift in Sources */,
 				B14C6A4D29F84D0F00361526 /* JournalingApp.swift in Sources */,
 			);

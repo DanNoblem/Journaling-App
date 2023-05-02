@@ -8,33 +8,30 @@
 import SwiftUI
 import Foundation
 
-struct info: Codable, Identifiable {
+struct info: Encodable, Decodable, Identifiable {
     var id: Int
     var title: String
-    var body: String
+    var items: [contents]
+    var uniqueId = 0
+    
+    init () {
+        items = []
+        self.reset();
+    }
+    
+    mutating func reset () {
+        uniqueId = 0
+        items = []
+    }
+    
+    func item(id: Int) -> contents? {
+        items.first { $0.id == id }
+    }
 
 }
 
-var information: [info] = load("Textinfo.json")
-
-func load<T: Decodable>(_ filename: String) -> T {
-    let data: Data
-
-    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-        else {
-            fatalError("Couldn't find \(filename) in main bundle.")
-    }
-
-    do {
-        data = try Data(contentsOf: file)
-    } catch {
-        fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
-    }
-
-    do {
-        let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
-    } catch {
-        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
-    }
+struct contents: Codable, Hashable, Identifiable {
+    var id: Int
+    var order: Int
+    var content: String
 }

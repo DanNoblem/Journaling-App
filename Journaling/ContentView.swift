@@ -13,21 +13,25 @@ struct ContentView: View {
     @State private var textStyle = UIFont.TextStyle.footnote
     
     var body: some View {
-        VStack {
-            TextView(text: $textInput, textStyle: $textStyle)
-            Button(action: {
-                writeTextToJSON(text: textInput)
-                savedText = textInput
-            }, label: {
-                Text("Save")
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            })
-        }
-        .onAppear {
-            savedText = readTextFromJSON()
+        HStack{
+            Text("Title").font(.largeTitle)
+            VStack {
+                TextView(text: $textInput, textStyle: $textStyle)
+                Button(action: {
+                    writeTextToJSON(text: textInput)
+                    savedText = textInput
+                }, label: {
+                    Text("Save")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                })
+            }
+            .onAppear {
+                savedText = readTextFromJSON()
+            }
+            
         }
     }
     
@@ -48,7 +52,7 @@ struct ContentView: View {
         }
         
         // Set the file name
-        let fileName = "text.json"
+        let fileName = "Textinfo.JSON"
         
         // Set the file URL
         let fileURL = documentDirectoryPath.appendingPathComponent(fileName)
@@ -70,7 +74,7 @@ struct ContentView: View {
         }
         
         // Set the file name
-        let fileName = "text.json"
+        let fileName = "Textinfo.JSON"
         
         // Set the file URL
         let fileURL = documentDirectoryPath.appendingPathComponent(fileName)
