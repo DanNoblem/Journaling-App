@@ -2,14 +2,13 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var datas = ReadData()
     
     @State private var textInput = ""
     @State private var savedText = ""
     @State private var textStyle = UIFont.TextStyle.footnote
     
     var body: some View {
-        List(datas.infos){ info in
+        ForEach(information){ info in
                     VStack(alignment: .leading) {
                         Text(info.title)
                             .font(.title)
